@@ -1,0 +1,11 @@
+<header class="posts-list">
+  <h1><%= @post.title %></h1>
+  <h4><%= link_to 'Edit', edit_post_path(@post) %> | <%= link_to 'Delete', post_path(@post),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></h4>
+</header>
+<div class="posts-list">
+<div class="single-post">
+  <p class="single-post-text respect-breaks"><%= @post.text %></p>
+</div>
+</div>
