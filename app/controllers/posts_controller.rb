@@ -22,7 +22,7 @@ class PostsController < ApplicationController
       flash[:notice] = "#{@post.title} was successfully published."
       redirect_to post_path(@post)
     else
-      flash[:alert] = @post.error.full_messages
+      # flash[:alert] = @post.error.full_messages
       render :new
     end
   end
