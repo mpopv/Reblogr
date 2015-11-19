@@ -4,9 +4,11 @@
   <div class="profile-pic" style="background-image: url(<%= @user.photo_url =%>)" title="<%= @user.username =%>'s profile picture">
   </div>
 
-  <div class="profile-info-box">
-    <h1><%= @user.username %></h1>
-    <h2><%= @user.email %></h2>
+  <div class="profinfobox-container">
+    <div class="profile-info-box">
+      <h1><%= @user.username %></h1>
+      <h2><%= @user.email %></h2>
+    </div>
   </div>
 
   <h3>Following</h3>

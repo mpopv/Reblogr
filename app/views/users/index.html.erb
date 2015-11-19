@@ -1,8 +1,23 @@
-All users:
 
-<% @users.each do |user| %>
-  <p>
-    <p><%= user.email %></p>
-    <p><%= link_to "Follow", followings_path(:follower_id => user), :method => :post %></p>
-  </p>
-<% end %>
+<div class="user-list-container">
+  <% @users.each do |user| %>
+    <div class="user-list-box" style="background-image: url(<%= user.header_url %>);">
+
+    </div>
+  <% end %>
+</div>
+
+<!--
+<#% @users.each do |user| %>
+  <div class="single-post post-bg user-list" style="background-image: url(<#%= user.header_url %>);">
+  <div class="user-list-inner-box">
+    <a class="relative" href="<#%= user_path(user) %>">
+      <div class="profile-pic mini-pic"  style="background-image: url(<#%= user.photo_url %>);"></div>
+    </a>
+    <h3 class="header-title single-post-title">
+      <#%= link_to user.username, user_path(user) %>
+    </h3>
+    <p><#%= link_to "Follow", followings_path(:follower_id => user), :method => :post %></p>
+  </div>
+  </div>
+<#% end %> -->

@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+.relative {
+  position: relative;
+}
+
 /*----------- Page container setup ------------- */
 
 body {
@@ -51,8 +55,12 @@ div.page-container {
   background-color: #FFF;
 }
 
-.logo {
+.logo li {
+  text-transform: none;
+  font-size: 250%;
   float: left;
+  font-weight: 700;
+  letter-spacing: -2px;
 }
 
 /* ---------- Show post header ---------- */
@@ -129,6 +137,33 @@ div.mini-pic {
   line-height: 40px;
 }
 
+/* ---------- User profile info box ---------- */
+
+.profile-info-box {
+  margin: 15px auto;
+}
+
+.profile-info-box * {
+  font-family: "brandon-grotesque", sans-serif;
+}
+
+.profile-info-box h1 {
+  font-size: 50px;
+  color: #F26101;
+  line-height: 65px;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+.profile-info-box h2 {
+  font-size: 18px;
+  color: #4d4d4d;
+  line-height: 35px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
 /* ---------- Post tile in list of posts ---------- */
 
 div.print-posts {
@@ -152,4 +187,19 @@ div.single-post {
   max-width: 60%;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   z-index: 9999;
+}
+
+/* ----------- User tiles in list of users ----------- */
+
+
+div.user-list-container {
+
+}
+
+div.user-list-box {
+  display: inline-block;
+  background-size: cover;
+  width: 200px;
+  height: 100px;
+  margin: 15px;
 }
