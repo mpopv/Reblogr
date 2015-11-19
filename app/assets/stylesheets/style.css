@@ -13,11 +13,7 @@ body {
 }
 
 div.page-container {
-  max-width: 1200px;
-  min-height: 600px;
   min-height: 70vh;
-  margin: 15px auto;
-  padding: 15px;
   background-color: #FFF;
 }
 
@@ -25,14 +21,16 @@ div.page-container {
 
 .nav-base {
   width: 100%;
-  height: 55px;
-  border-bottom: 2px solid #ECF0F1;
+  height: 45px;
+  background-color: #304269;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
 }
 
 .nav li {
   float: right;
   display: inline-block;
-  font-family: 'Oswald', sans-serif;
+  font-family: "brandon-grotesque", sans-serif;
+  text-transform: uppercase;
   font-size: 1.2em;
   line-height: 40px;
   height: 40px;
@@ -40,19 +38,56 @@ div.page-container {
 
 .nav a {
   text-decoration: none;
-  color: #005f5f;
+  color: #91BED4;
   display: inline-block;
-  background-color: #FFF;
+  background-color: #304269;
   transition: .3s background-color;
   padding: 2px 15px;
   margin: 0;
 }
 
 .nav a:hover {
-  color: #FFF;
-  background-color: #005f5f;
+  color: #F26101;
+  background-color: #FFF;
 }
 
 .logo {
   float: left;
+}
+
+/* ---------- Header ---------- */
+
+div.post-bg {
+  background-size: cover;
+  background-position: center;
+}
+
+div.header {
+  width: 100%;
+  height: 15vw;
+}
+
+/* ----------- Content ---------- */
+
+div.content-container {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 25px;
+}
+
+h1.header-title {
+  font-family: "brandon-grotesque", sans-serif;
+  font-size: 55px;
+  line-height: 50px;
+  color: #F26101;
+  text-transform: uppercase;
+}
+
+p.post-text {
+  font-family: "leitura-news", serif;
+  font-size: 18px;
+  font-weight: lighter;
+  color: #4d4d4d;
+  white-space: pre-wrap;
+  line-height: 1.8;
 }
