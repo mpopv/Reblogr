@@ -2,6 +2,7 @@ All users:
 
 <% @users.each do |user| %>
   <p>
-    <%= user.email %>
+    <p><%= user.email %></p>
+    <p><%= link_to "Follow", followings_path(:follower_id => user), :method => :post %></p>
   </p>
 <% end %>

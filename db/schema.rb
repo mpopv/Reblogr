@@ -11,16 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151118154711) do
+ActiveRecord::Schema.define(version: 20151119185213) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "followings", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "follower_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "friendships", force: :cascade do |t|
+  end
+
   create_table "posts", force: :cascade do |t|
-    t.string "title"
-    t.text   "text"
-    t.string "header_type"
-    t.string "header_url"
+    t.string  "title"
+    t.text    "text"
+    t.string  "header_type"
+    t.string  "header_url"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -36,6 +47,8 @@ ActiveRecord::Schema.define(version: 20151118154711) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "photo_url"
+    t.string   "username"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

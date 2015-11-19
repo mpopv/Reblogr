@@ -1,9 +1,16 @@
 <div class="print-posts">
   <% @posts.each do |post| %>
-    <div class="single-post">
-      <h3 class="single-post-title"><%= link_to post.title, post_path(post) %></h3>
-      <p class="single-post-links"><%= link_to 'Edit', edit_post_path(post) %></p>
-      <p class="single-post-text respect-breaks"><%= post.text %></p>
+    <div class="single-post post-bg" style="background-image: url(<%= post.header_url %>);">
+      <h3 class="header-title single-post-title">
+        <%= link_to post.title, post_path(post) %>
+      </h3>
+      <div class="single-post-byline">
+        <a href="<%= user_path(post.user) %>">
+          <div class="profile-pic mini-pic"  style="background-image: url(<%= post.user.photo_url %>);"></div>
+        </a>
+        <%= link_to post.user.username, user_path(post.user) %>
+      </p>
     </div>
+  </div>
   <% end %>
 </div>
