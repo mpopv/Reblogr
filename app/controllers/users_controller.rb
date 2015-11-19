@@ -9,9 +9,10 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @posts = @user.posts
 
-    respond_to do |format|
-        format.html # show.html.erb
-        format.xml { render :xml => @user }
-    end
+    # # This is apparently not needed
+    # respond_to do |format|
+    #     format.html # show.html.erb
+    #     format.xml { render :xml => @user }
+    # end
   end
 end
