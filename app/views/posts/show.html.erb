@@ -7,11 +7,11 @@
     <h1 class="post-header-title"><%= @post.title %></h1>
     <h3 class="post-header-title">By <%= link_to @post.user.username, user_path(@post.user) %></h3>
   </div>
-  <% if @user == current_user %>
-    <h4 class="post-header-title"><%= link_to 'Edit', edit_post_path(@post) %> | <%= link_to 'Delete', post_path(@post),
+  <!-- <#% if current_user %>
+    <h4 class="post-header-title"><#%= link_to 'Edit', edit_post_path(@post) %> | <#%= link_to 'Delete', post_path(@post),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></h4>
-  <% end %>
+  <#% end %> -->
 
   <p class="post-text"><%= @post.text %></p>
 
