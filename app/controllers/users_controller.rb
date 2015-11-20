@@ -14,4 +14,13 @@ class UsersController < ApplicationController
         format.xml { render :xml => @user }
     end
   end
+
+  def new
+
+  end
+
+  def save
+
+  end
+  
 end
