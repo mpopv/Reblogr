@@ -1,5 +1,5 @@
 <div class="print-posts">
-  <% @posts.each do |post| %>
+  <% @posts.reverse.each do |post| %>
     <div class="single-post post-bg" style="background-image: url(<%= post.header_url %>);">
       <h3 class="header-title single-post-title">
         <%= link_to post.title, post_path(post) %>

@@ -12,6 +12,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rails_12factor', group: :production
 gem 'puma'
 gem 'devise'
+gem 'seed_dump'
 
 group :development, :test do
   gem 'byebug'

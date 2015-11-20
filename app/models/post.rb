@@ -6,4 +6,12 @@ class Post < ActiveRecord::Base
 
   validates :text, presence: true, length: { minimum: 50 }
 
+  def next
+    user.posts.where("id > ?", id).first
+  end
+
+  def prev
+    user.posts.where("id < ?", id).last
+  end
+
 end

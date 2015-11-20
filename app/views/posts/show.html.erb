@@ -3,12 +3,56 @@
 </div>
 
 <div class="content-container">
-  <div class="header-title">
-    <h1 class="header-title"><%= @post.title %></h1>
+  <div class="post-header-title">
+    <h1 class="post-header-title"><%= @post.title %></h1>
+    <h3 class="post-header-title">By <%= link_to @post.user.username, user_path(@post.user) %></h3>
   </div>
-  <h4><%= link_to 'Edit', edit_post_path(@post) %> | <%= link_to 'Delete', post_path(@post),
+  <% if @user == current_user %>
+    <h4 class="post-header-title"><%= link_to 'Edit', edit_post_path(@post) %> | <%= link_to 'Delete', post_path(@post),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></h4>
+  <% end %>
 
   <p class="post-text"><%= @post.text %></p>
+
+  <% if @post.prev || @post.next %>
+  <h2 class="prev-next">Read more by <%= @post.user.username %></h2>
+  <% end %>
+
+  <% if @post.prev %>
+  <div class="prev-next">
+  <h3 class="prev-next">Previous</h3>
+    <div class="single-post post-bg" style="background-image: url(<%= @post.prev.header_url %>);">
+      <h3 class="header-title single-post-title">
+        <%= link_to @post.prev.title, post_path(@post.prev) %>
+      </h3>
+      <div class="single-post-byline">
+          <a href="<%= user_path(@post.prev.user) %>">
+            <div class="profile-pic mini-pic"  style="background-image: url(<%= @post.prev.user.photo_url %>);"></div>
+          </a>
+          <%= link_to @post.prev.user.username, user_path(@post.prev.user) %>
+        </p>
+      </div>
+    </div>
+  </div>
+  <% end %>
+
+  <% if @post.next %>
+  <div class="prev-next">
+  <h3 class="prev-next">Next</h3>
+    <div class="single-post post-bg" style="background-image: url(<%= @post.next.header_url %>);">
+      <h3 class="header-title single-post-title">
+        <%= link_to @post.next.title, post_path(@post.next) %>
+      </h3>
+      <div class="single-post-byline">
+          <a href="<%= user_path(@post.next.user) %>">
+            <div class="profile-pic mini-pic"  style="background-image: url(<%= @post.next.user.photo_url %>);"></div>
+          </a>
+          <%= link_to @post.next.user.username, user_path(@post.next.user) %>
+        </p>
+      </div>
+    </div>
+  </div>
+  <% end %>
+
 </div>

@@ -1,40 +1,43 @@
 
 <div class="profile-container">
 
-  <div class="profile-pic" style="background-image: url(<%= @user.photo_url =%>)" title="<%= @user.username =%>'s profile picture">
-  </div>
-
-  <div class="profinfobox-container">
-    <div class="profile-info-box">
-      <h1><%= @user.username %></h1>
-      <h2><%= @user.email %></h2>
-    </div>
-  </div>
-
-  <h3>Following</h3>
-  <ul>
-    <% for following in @user.followings %>
-      <li>
-        <%= following.follower.email %>
-        (<%= link_to "remove", following, :method => :delete %>)
-      </li>
-    <% end %>
-  </ul>
-
-  <div class="print-posts">
-    <% @posts.each do |post| %>
-      <div class="single-post post-bg" style="background-image: url(<%= post.header_url %>);">
-        <h3 class="header-title single-post-title">
-          <%= link_to post.title, post_path(post) %>
-        </h3>
-        <div class="single-post-byline">
-          <a href="<%= user_path(post.user) %>">
-            <div class="profile-pic mini-pic"  style="background-image: url(<%= post.user.photo_url %>);"></div>
-          </a>
-          <%= link_to post.user.username, user_path(post.user) %>
-        </p>
+  <div class="cover-container" style="background-image: url(<%= @user.header_url =%>)" title="<%= @user.username =%>'s cover photo">
+    <div class="cover-bottom-bar">
+      <div class="profile-pic" style="background-image: url(<%= @user.photo_url =%>)" title="<%= @user.username =%>'s profile picture">
       </div>
     </div>
+  </div>
+
+    <div class="profinfobox-container">
+      <div class="profile-info-box">
+        <h1><%= @user.username %></h1>
+        <h2><%= @user.email %></h2>
+      </div>
+    </div>
+
+  <!-- <h3>Following</h3>
+  <ul>
+    <%# for following in @user.followings %>
+      <li>
+        <%#= following.follower.email %>
+        (<%#= link_to "remove", following, :method => :delete %>)
+      </li>
+    <%# end %>
+  </ul> -->
+
+  <div class="print-posts">
+    <% @posts.reverse.each do |post| %>
+        <div class="single-post post-bg" style="background-image: url(<%= post.header_url %>);">
+          <h3 class="header-title single-post-title">
+            <%= link_to post.title, post_path(post) %>
+          </h3>
+          <div class="single-post-byline">
+            <a href="<%= user_path(post.user) %>">
+              <div class="profile-pic mini-pic"  style="background-image: url(<%= post.user.photo_url %>);"></div>
+            </a>
+            <%= link_to post.user.username, user_path(post.user) %>
+          </div>
+        </div>
     <% end %>
   </div>
 
