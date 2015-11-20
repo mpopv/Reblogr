@@ -1,0 +1,367 @@
+
+/*----------- CSS Reset ------------- */
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.relative {
+  position: relative;
+}
+
+/*----------- Page container setup ------------- */
+
+body {
+  background-color: #D9E8F5;
+  z-index: -9999;
+}
+
+div.page-container {
+  min-height: 70vh;
+  background-color: #FFF;
+}
+
+/*----------- Nav bar ------------- */
+
+.nav-base {
+  width: 100%;
+  height: 45px;
+  background-image: -webkit-linear-gradient(bottom, #304269 0%, #395179 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.nav li {
+  float: right;
+  display: inline-block;
+  font-family: "brandon-grotesque", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.95em;
+  line-height: 40px;
+  height: 40px;
+  letter-spacing: 1px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #91BED4;
+  display: inline-block;
+  background-color: rgba(0,0,0,0);
+  transition: .3s background-color;
+  padding: 2px 12px;
+  margin: 0;
+}
+
+.nav a:hover {
+  color: #F26101;
+  background-color: #FFF;
+  border-bottom: 3px solid #F26101;
+}
+
+.logo li {
+  text-transform: none;
+  font-size: 250%;
+  float: left;
+  font-weight: 700;
+  letter-spacing: -2px;
+}
+
+/* ---------- Show post header ---------- */
+
+div.post-bg {
+  background-size: cover;
+  background-position: center;
+}
+
+div.header {
+  width: 100%;
+  height: 15vw;
+}
+
+/* ----------- Show post content ---------- */
+
+div.content-container {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 25px;
+}
+
+.header-title {
+  font-family: "brandon-grotesque", sans-serif;
+  font-size: 55px;
+  line-height: 40px;
+  color: #1c1c1c;
+}
+
+h1.post-header-title {
+  font-family: "brandon-grotesque", sans-serif;
+  font-size: 55px;
+  line-height: 52px;
+  color: #1c1c1c;
+}
+
+h3.post-header-title {
+  font-family: "brandon-grotesque", sans-serif;
+  font-size: 25px;
+  line-height: 20px;
+  color: #F26101;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+h3.post-header-title a {
+  color: #F26101;
+  text-decoration: none;
+}
+
+h3.post-header-title a:hover {
+  text-decoration: underline;
+}
+
+p.post-text {
+  font-family: "leitura-news", serif;
+  font-size: 20px;
+  /*font-weight: lighter;*/
+  color: #4d4d4d;
+  white-space: pre-wrap;
+  line-height: 2;
+}
+
+/* ---------- User Profile ---------- */
+
+div.profile-container {
+  text-align: center;
+}
+
+div.cover-container {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0 0 0;
+  box-sizing: border-box;
+}
+
+div.cover-bottom-bar {
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 50%);
+}
+
+div.profile-pic {
+  width: 250px;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  border: 10px solid #FFF;
+  border-radius: 50%;
+}
+
+div.single-post-byline {
+  position:relative;
+}
+
+div.mini-pic {
+  width: 110px;
+  height: 110px;
+  margin: 1px;
+  border: 5px solid #FFF;
+  position:absolute;
+  bottom: -40px;
+  right: -40px;
+}
+
+.single-post a {
+  text-decoration: none;
+  font-family: "brandon-grotesque", sans-serif;
+  font-size: 175%;
+  color: #F26101;
+  line-height: 40px;
+}
+
+/* ---------- User profile info box ---------- */
+
+.profile-info-box {
+  margin: 15px auto;
+}
+
+.profile-info-box * {
+  font-family: "brandon-grotesque", sans-serif;
+}
+
+.profile-info-box h1 {
+  font-size: 50px;
+  color: #4d4d4d;
+  line-height: 65px;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+.profile-info-box h2 {
+  font-size: 18px;
+  color: #F26101;
+  line-height: 35px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+/* ---------- Post tile in list of posts ---------- */
+
+div.print-posts {
+  padding: 0 25px 50px 25px;
+  text-align: left;
+}
+
+div.single-post {
+  width: 80%;
+  min-height: 50px;
+  padding: 20px;
+  margin: 35px auto;
+  border-radius: 7px;
+}
+
+.single-post-title, .single-post-title a {
+  text-decoration: none;
+  font-size: 35px;
+  line-height: 30px;
+  color: #FFF;
+  max-width: 60%;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+/* ----------- User tiles in list of users ----------- */
+
+
+div.user-list-container {
+
+}
+
+div.user-list-box {
+  display: inline-block;
+  background-size: cover;
+  width: 200px;
+  height: 100m px;
+  margin: 15px;
+}
+
+/* ----------- Forms ---------- */
+
+form {
+  max-width: 700px;
+  margin: 35px auto;
+  font-family: "leitura-news", serif;
+  font-size: 14px;
+}
+
+form p {
+  margin: 10px 20px;
+}
+
+textarea, input {
+  width: 100%;
+  padding: 15px;
+}
+
+textarea {
+  min-height: 500px;
+}
+
+input[type=submit] {
+  max-width: 350px;
+  padding: 15px 35px;
+  margin: 25px auto 45px auto;
+  border:0 none;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  background-image: -webkit-linear-gradient(bottom, #304269 0%, #395179 100%);
+  text-align: center;
+  font-family: "brandon-grotesque", sans-serif;
+  font-size: 20px;
+  color: #FFF;
+}
+
+p.submit-button {
+  text-align: center;
+  font-family: "brandon-grotesque", sans-serif;
+  font-size: 20px;
+  color: #FFF;
+}
+
+label {
+  font-family: "brandon-grotesque", sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* ----------- Prev / Next Post ---------- */
+
+div.prev-next {
+  width: 45%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+@media only screen and (max-device-width: 1024px) {
+  div.prev-next {
+    width: 100%;
+    display: inline;
+    vertical-align: top;
+  }
+}
+
+h2.prev-next, h3.prev-next {
+  font-family: "brandon-grotesque", sans-serif;
+  line-height: 30px;
+}
+
+h2.prev-next {
+  font-size: 225%;
+  color: #b3b3b3;
+  margin: 50px 20px 20px 20px;
+}
+
+h3.prev-next {
+  font-size: 175%;
+  text-transform: uppercase;
+  color: #1c1c1c;
+  margin: 5px 20px 0 20px;
+}
+
+/* ---------- Alerts ---------- */
+
+.alert {
+  margin: 15px auto 5px auto;
+  background-color: #F26101;
+  text-align: center;
+  font-family: "brandon-grotesque", sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #FFF;
+  max-width: 500px;
+  padding: 10px 0;
+  border-radius: 5px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
