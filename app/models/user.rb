@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   has_many :posts
 
   has_many :followings
-
+  # nice use of has_many through with a self-referential join!
   has_many :followers, :through => :followings
 
 end

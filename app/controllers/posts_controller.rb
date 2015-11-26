@@ -17,6 +17,8 @@ class PostsController < ApplicationController
   end
 
   def create
+    # you can shorten this to one line like so:
+    # @post = current_user.posts.build(post_params)
     @post = Post.new(post_params)
     @post.user = current_user
     if @post.save

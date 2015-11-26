@@ -6,6 +6,13 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css" />
+  <!-- this stylesheet tag isn't needed, and in fact doesn't correctly point
+       to your styles.css. (check the console and you'll see the error).
+       that's because you just need the style_sheet_link tag, and that loads
+       application.css, which due to the rails asset pipeline, loads all other css
+       as well.
+       the same holdes for your script.js tag down below
+   -->
   <link rel="stylesheet" type="text/css" href="style.css" />
   <script src="https://use.typekit.net/uot3qox.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>

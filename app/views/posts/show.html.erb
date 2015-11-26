@@ -20,6 +20,7 @@
   <% end %>
 
   <% if @post.prev %>
+  <!-- I'd strongly suggest using a partial here (and for 'next') to reduce duplication of view code -->
   <div class="prev-next">
   <h3 class="prev-next">Previous</h3>
     <div class="single-post post-bg" style="background-image: url(<%= @post.prev.header_url %>);">
