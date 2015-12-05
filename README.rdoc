@@ -1,5 +1,5 @@
 == reblogr
 
-Reblogr is a two-model CRUD built with Rails and deployed on Heroku for my 2nd project at General Assembly DC's WDI program.
+Reblogr is a two-model CRUD web app built with Rails and deployed on Heroku for my 2nd project at General Assembly DC's WDI program.
 
-View the live site at https://reblogr.herokuapp.com/
+View the live site at https://reblogr.herokuapp.com
