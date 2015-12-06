@@ -23,6 +23,7 @@ class PostsController < ApplicationController
       flash[:notice] = "#{@post.title} was successfully published."
       redirect_to post_path(@post)
     else
+      # Throws an undefined method error for 'error'
       # flash[:alert] = @post.error.full_messages
       render :new
     end
@@ -34,7 +35,8 @@ class PostsController < ApplicationController
       flash[:notice] = "#{@post.title} was successfully updated."
       redirect_to post_path(@post)
     else
-      flash[:alert] = @post.error.full_messages
+      # Throws an undefined method error for 'error'
+      # flash[:alert] = @post.error.full_messages
       render :new
     end
   end
