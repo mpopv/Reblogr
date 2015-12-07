@@ -1,4 +1,7 @@
 <div class="print-posts">
+  <!-- rather than reverse here, I'd do that in the controller. Also, I'd probably suggest
+        doing a more explicit sort using the `.order` method, and using created_at or whatever
+        attribute you intend  -->
   <% @posts.reverse.each do |post| %>
     <div class="single-post post-bg" style="background-image: url(<%= post.header_url %>);">
       <h3 class="header-title single-post-title">

@@ -23,9 +23,6 @@ ActiveRecord::Schema.define(version: 20151119204309) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "friendships", force: :cascade do |t|
-  end
-
   create_table "posts", force: :cascade do |t|
     t.string  "title"
     t.text    "text"
